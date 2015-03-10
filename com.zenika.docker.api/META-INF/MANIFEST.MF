@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Api
+Bundle-SymbolicName: com.zenika.docker.api;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: ZENIKA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: jars/rental.jar,
+ .
+Export-Package: com.opcoach.training.rental

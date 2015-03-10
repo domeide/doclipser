@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.zenika.docker.dsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.zenika.docker.dsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.zenika.docker.dsl,
+ com.zenika.docker.dsl.services,
+ com.zenika.docker.dsl.dockerfileDsl,
+ com.zenika.docker.dsl.dockerfileDsl.impl,
+ com.zenika.docker.dsl.dockerfileDsl.util,
+ com.zenika.docker.dsl.serializer,
+ com.zenika.docker.dsl.parser.antlr,
+ com.zenika.docker.dsl.parser.antlr.internal,
+ com.zenika.docker.dsl.validation,
+ com.zenika.docker.dsl.scoping,
+ com.zenika.docker.dsl.generator,
+ com.zenika.docker.dsl.formatting

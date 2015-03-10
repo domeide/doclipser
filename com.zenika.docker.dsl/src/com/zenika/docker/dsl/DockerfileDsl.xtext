@@ -1,0 +1,23 @@
+grammar com.zenika.docker.dsl.DockerfileDsl with org.eclipse.xtext.common.Terminals
+
+generate dockerfileDsl "http://www.zenika.com/docker/dsl/DockerfileDsl"
+
+Dockerfile:
+	instructions+=Instruction*;
+	
+Instruction:
+	From | Cmd;
+
+Cmd:
+	{Cmd}
+	'CMD' '[' (executable=STRING)? (params+=STRING)? (',' params+=STRING)* ']'
+;
+
+From:
+	'FROM' name=ID (tag=TAG_ID)?
+;
+
+terminal SL_COMMENT 	: '#' !('\n'|'\r')* ('\r'? '\n')?;
+terminal TAG_ID  		: '^'?!(' ')*':'('a'..'z'|'A'..'Z'|'_'|'0'..'9') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+	

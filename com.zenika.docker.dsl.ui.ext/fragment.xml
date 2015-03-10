@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            id="com.zenika.docker.dsl.ui.ext.docker-content-type"
+            name="name"
+            priority="normal">
+      </content-type>
+   </extension>
+
+</fragment>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.zenika.docker.ide.ui.handlers.DockerBuildHandler"
+            id="com.zenika.docker.ide.ui.build"
+            name="Docker build">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.pop.any?after=additions">
+         <command
+               commandId="com.zenika.docker.ide.ui.build"
+               icon="icons/Agency.png"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="com.zenika.docker.ide.ui.oneDockerFileSelected">
+         <and>
+            <count
+                  value="1">
+            </count>
+            <iterate>
+               <adapt
+                     type="org.eclipse.core.resources.IFile">
+                  <or>
+                     <test
+                           property="org.eclipse.core.resources.name"
+                           value="Dockerfile">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="Dockerfile">
+                     </test>
+                  </or>
+               </adapt>
+            </iterate>
+         </and>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            category="org.eclipse.ui.externaltools"
+            class="com.zenika.docker.ide.ui.launch.DockerLaunchShortcut"
+            helpContextId="org.eclipse.ui.externaltools.launchShortcutHelpContext.dockerShortcut"
+            icon="icons/docker.png"
+            id="com.zenika.docker.ide.ui.dockerShortcut"
+            label="Docker Build"
+            modes="run, debug">
+         <contextualLaunch>
+            <enablement>
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            category="org.eclipse.ui.externaltools"
+            class="com.zenika.docker.ide.ui.launch.DockerLaunchShortcut"
+            icon="icons/Docker.jpeg"
+            id="com.zenika.docker.ide.ui.dockerShortcut"
+            label="Docker Run"
+            modes="run, debug">
+         <contextualLaunch>
+            <enablement>
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.zenika.docker.ide.ui.AbstractLaunchConfigurationTabGroup1"
+            id="com.zenika.docker.ide.ui.DockerTabGroup1"
+            type="com.zenika.docker.ide.ui.launchConfigurationTabGroup1">
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            category="org.eclipse.ui.externaltools"
+            id="com.zenika.docker.ide.ui.dockerConfigurationType"
+            modes="run, debug"
+            name="Docker build">
+      </launchConfigurationType>
+   </extension>
+
+</plugin>
