@@ -5,6 +5,8 @@ Bundle-SymbolicName: com.zenika.docker.api;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: ZENIKA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ClassPath: jars/rental.jar,
- .
-Export-Package: com.opcoach.training.rental
+Bundle-ClassPath: .,
+ jars/docker-java-1.0.1-SNAPSHOT.jar
+Export-Package: com.github.dockerjava.api,
+ com.github.dockerjava.api.command,
+ com.github.dockerjava.api.model
