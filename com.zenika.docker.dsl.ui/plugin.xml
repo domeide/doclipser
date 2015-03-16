@@ -13,7 +13,7 @@
             id="com.zenika.docker.dsl.DockerfileDsl"
             name="DockerfileDsl Editor">
            <contentTypeBinding
-                 contentTypeId="com.zenika.docker.dsl.ui.contentTypeBinding1">
+                 contentTypeId="com.zenika.docker.dsl.ui.ext.docker-content-type">
            </contentTypeBinding>
         </editor>
     </extension>
