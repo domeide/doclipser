@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.zenika.docker.feature_1.0.0.qualifier.jar" id="com.zenika.docker.feature" version="1.0.0.qualifier"/>
+</site>
