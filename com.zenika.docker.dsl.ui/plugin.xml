@@ -9,7 +9,7 @@
             class="com.zenika.docker.dsl.ui.DockerfileDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="Dockerfile"
+            filenames="Dockerfile"
             id="com.zenika.docker.dsl.DockerfileDsl"
             name="DockerfileDsl Editor">
            <contentTypeBinding

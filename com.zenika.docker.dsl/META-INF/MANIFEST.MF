@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.zenika.docker.dsl
-Bundle-Vendor: My Company
+Bundle-Vendor: Zenika
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: com.zenika.docker.dsl; singleton:=true
 Bundle-ActivationPolicy: lazy
@@ -22,14 +22,15 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.zenika.docker.dsl,
- com.zenika.docker.dsl.services,
  com.zenika.docker.dsl.dockerfileDsl,
  com.zenika.docker.dsl.dockerfileDsl.impl,
  com.zenika.docker.dsl.dockerfileDsl.util,
- com.zenika.docker.dsl.serializer,
+ com.zenika.docker.dsl.formatting,
+ com.zenika.docker.dsl.generator,
  com.zenika.docker.dsl.parser.antlr,
  com.zenika.docker.dsl.parser.antlr.internal,
- com.zenika.docker.dsl.validation,
+ com.zenika.docker.dsl.resource,
  com.zenika.docker.dsl.scoping,
- com.zenika.docker.dsl.generator,
- com.zenika.docker.dsl.formatting
+ com.zenika.docker.dsl.serializer,
+ com.zenika.docker.dsl.services,
+ com.zenika.docker.dsl.validation

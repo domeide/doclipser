@@ -3,6 +3,8 @@
  */
 package com.zenika.docker.dsl.ui;
 
+import static com.zenika.docker.dsl.ui.XtextSetup.configureXtextToWorkWithFileNames;
+
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 /**
@@ -11,5 +13,6 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class DockerfileDslUiModule extends com.zenika.docker.dsl.ui.AbstractDockerfileDslUiModule {
 	public DockerfileDslUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+		configureXtextToWorkWithFileNames(new InjectorProvider());
 	}
 }
