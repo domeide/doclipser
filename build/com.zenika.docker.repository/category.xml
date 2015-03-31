@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.zenika.docker.feature_1.0.0.qualifier.jar" id="com.zenika.docker.feature" version="1.0.0.qualifier"/>
+   <feature url="features/com.zenika.docker.features.dockerfileeditor_1.0.0.qualifier.jar" id="com.zenika.docker.features.dockerfileeditor" version="1.0.0.qualifier" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
+      <category name="DockerfileEditor"/>
+   </feature>
+   <feature url="features/com.zenika.docker.features.dockerclient_1.0.0.qualifier.jar" id="com.zenika.docker.features.dockerclient" version="1.0.0.qualifier">
+      <category name="DockerApiClient"/>
+   </feature>
+   <category-def name="DockerfileEditor" label="Dockerfile editor">
+      <description>
+         Eclipse plugins for Dockerfile editing
+      </description>
+   </category-def>
+   <category-def name="DockerApiClient" label="Docker API Client">
+      <description>
+         Client to Docker API
+      </description>
+   </category-def>
 </site>
