@@ -12,7 +12,7 @@ import org.eclipse.ui.IEditorPart;
 import com.zenika.docker.api.DockerClient;
 import com.zenika.docker.api.DockerClientFactory;
 
-public class DockerLaunchShortcut implements ILaunchShortcut2 {
+public class DockerRunLaunchShortcut implements ILaunchShortcut2 {
 
 	@Override
 	public void launch(ISelection sel, String mode) {
@@ -22,7 +22,7 @@ public class DockerLaunchShortcut implements ILaunchShortcut2 {
 				IFile dockerfile = (IFile)selected;
 				IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
 				DockerClient dockerClient = DockerClientFactory.makeDockerClient();
-				dockerClient.defaultBuildCommand(dockerfilePath.toOSString());
+				dockerClient.defaultRunCommand(dockerfilePath.toOSString());
 			}
 		}
 	}

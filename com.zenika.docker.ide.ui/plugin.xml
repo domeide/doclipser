@@ -31,10 +31,9 @@
          point="org.eclipse.debug.ui.launchShortcuts">
       <shortcut
             category="org.eclipse.ui.externaltools"
-            class="com.zenika.docker.ide.ui.launch.DockerLaunchShortcut"
-            helpContextId="org.eclipse.ui.externaltools.launchShortcutHelpContext.dockerShortcut"
-            icon="icons/docker_logo_32.png"
-            id="com.zenika.docker.ide.ui.dockerShortcut"
+            class="com.zenika.docker.ide.ui.launch.DockerBuildLaunchShortcut"
+            icon="icons/DockerTrasparent_16x16.png"
+            id="com.zenika.docker.ide.ui.dockerBuildShortcut"
             label="Docker Build"
             modes="run, debug">
          <contextualLaunch>
@@ -50,9 +49,9 @@
          point="org.eclipse.debug.ui.launchShortcuts">
       <shortcut
             category="org.eclipse.ui.externaltools"
-            class="com.zenika.docker.ide.ui.launch.DockerLaunchShortcut"
-            icon="icons/docker_logo_32.png"
-            id="com.zenika.docker.ide.ui.dockerShortcut"
+            class="com.zenika.docker.ide.ui.launch.DockerRunLaunchShortcut"
+            icon="icons/DockerTrasparent_16x16.png"
+            id="com.zenika.docker.ide.ui.dockerRunShortcut"
             label="Docker Run"
             modes="run, debug">
          <contextualLaunch>
