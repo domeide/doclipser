@@ -16,7 +16,6 @@ import com.spotify.docker.client.DockerException;
 import com.spotify.docker.client.ProgressHandler;
 import com.spotify.docker.client.messages.ContainerConfig;
 import com.spotify.docker.client.messages.ContainerCreation;
-import com.spotify.docker.client.messages.ContainerInfo;
 import com.spotify.docker.client.messages.HostConfig;
 import com.spotify.docker.client.messages.PortBinding;
 import com.spotify.docker.client.messages.ProgressMessage;
@@ -108,6 +107,24 @@ public class DockerClientSpotify implements DockerClient {
 	public void infoCommand() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void defaultRmCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void defaultPsCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void defaultLogsCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

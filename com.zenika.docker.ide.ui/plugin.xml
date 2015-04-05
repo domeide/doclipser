@@ -32,7 +32,7 @@
       <shortcut
             category="org.eclipse.ui.externaltools"
             class="com.zenika.docker.ide.ui.launch.DockerBuildLaunchShortcut"
-            icon="icons/DockerTrasparent_16x16.png"
+            icon="icons/docker-build.gif"
             id="com.zenika.docker.ide.ui.dockerBuildShortcut"
             label="Docker Build"
             modes="run, debug">
@@ -50,9 +50,63 @@
       <shortcut
             category="org.eclipse.ui.externaltools"
             class="com.zenika.docker.ide.ui.launch.DockerRunLaunchShortcut"
-            icon="icons/DockerTrasparent_16x16.png"
+            icon="icons/docker-run.gif"
             id="com.zenika.docker.ide.ui.dockerRunShortcut"
             label="Docker Run"
+            modes="run, debug">
+         <contextualLaunch>
+            <enablement>
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            category="org.eclipse.ui.externaltools"
+            class="com.zenika.docker.ide.ui.launch.DockerLogsLaunchShortcut"
+            icon="icons/docker-logs.gif"
+            id="com.zenika.docker.ide.ui.dockerLogsShortcut"
+            label="Docker Logs"
+            modes="run, debug">
+         <contextualLaunch>
+            <enablement>
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            category="org.eclipse.ui.externaltools"
+            class="com.zenika.docker.ide.ui.launch.DockerPsLaunchShortcut"
+            icon="icons/docker-ps.gif"
+            id="com.zenika.docker.ide.ui.dockerPsShortcut"
+            label="Docker Ps"
+            modes="run, debug">
+         <contextualLaunch>
+            <enablement>
+               <reference
+                     definitionId="com.zenika.docker.ide.ui.oneDockerFileSelected">
+               </reference>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            category="org.eclipse.ui.externaltools"
+            class="com.zenika.docker.ide.ui.launch.DockerRmLaunchShortcut"
+            icon="icons/docker-rm.gif"
+            id="com.zenika.docker.ide.ui.dockerRmShortcut"
+            label="Docker Rm"
             modes="run, debug">
          <contextualLaunch>
             <enablement>

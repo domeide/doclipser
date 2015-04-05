@@ -117,5 +117,23 @@ public class DockerClientJavaApi implements DockerClient {
 		   .exec();
 	}
 
+	@Override
+	public void defaultRmCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void defaultPsCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void defaultLogsCommand(String buildContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }
