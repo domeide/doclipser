@@ -1,18 +1,18 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Doclipser
+### Doclipser brings Docker in Eclipse IDE in a simple and effective way.
 
-doclipser brings Docker in Eclipse IDE in a simple and effective way.
+![image](images/doclipser.gif)
 
-<div class="span4">
-        <div class="thumb">
-          <a href="#"><img class="screenshot" src="images/syntax_highlighting.png" alt="Image"></a>
-        </div>
-        <h4>Syntax Higlighting</h4>
-        <p>
-          Dockerfile <b>syntax highlighting</b> and the <b>semantic data</b> thanks to Xtext framework.
-        </p>
-</div>
+#### Dockerfile Syntax Highlighting
+![image](images/syntax-highlighting.gif)
+
+#### Dockerfile Auto Complete
+![image](images/auto-completion.gif)
+
+#### Docker commands
+![image](images/run-as-screenshot.gif)
+
+
 
 
 ## Installation
@@ -51,12 +51,15 @@ Click Next.
 5. Submit a pull request :D
 
 ## History
+2015-04-07 First draft available for internal review
 
 ## Credits
+* [Spotify](https://www.spotify.com/fr/) for their Java Docker API
+* [Xtext](https://eclipse.org/Xtext/) framework for the Dockerfile grammar definition
+* [Zenika](zenika.com) for supporting me
+* [Docker Inc.](docker.com) for inspiring me
+* [BinTray](bintray.com) build platform
 
 ## License
 
-
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+[Eclipse Public License v1.0]()https://www.eclipse.org/legal/epl-v10.html)
