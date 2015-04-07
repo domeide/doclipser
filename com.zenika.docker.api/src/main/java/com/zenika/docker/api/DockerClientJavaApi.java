@@ -74,11 +74,11 @@ public class DockerClientJavaApi implements DockerClient {
 	}
 
 	@Override
-	public void defaultBuildCommand(String buildContext) {
-		File baseDir = new File(buildContext);
+	public void defaultBuildCommand(String eclipseProjectName, String dockerBuildContext) {
+		File baseDir = new File(dockerBuildContext);
 		InputStream response = dockerClient.buildImageCmd(baseDir).exec();
 		StringWriter logwriter = new StringWriter();
-		messageConsole.getDockerConsoleOut().println(">>> Building " + buildContext + "/Dockerfile with default options");
+		messageConsole.getDockerConsoleOut().println(">>> Building " + dockerBuildContext + "/Dockerfile with default options");
 		messageConsole.getDockerConsoleOut().println("");
 
 		try {
@@ -101,7 +101,7 @@ public class DockerClientJavaApi implements DockerClient {
 	}
 
 	@Override
-	public void defaultRunCommand(String buildContext) {
+	public void defaultRunCommand(String eclipseProjectName, String dockerBuildContext) {
 		ExposedPort tcp8080 = ExposedPort.tcp(8080);
 
 		CreateContainerResponse container = dockerClient.createContainerCmd("mariolet/my-tomcat")
@@ -118,19 +118,19 @@ public class DockerClientJavaApi implements DockerClient {
 	}
 
 	@Override
-	public void defaultRmCommand(String buildContext) {
+	public void defaultRmCommand(String eclipseProjectName, String dockerBuildContext) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void defaultPsCommand(String buildContext) {
+	public void defaultPsCommand() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void defaultLogsCommand(String buildContext) {
+	public void defaultLogsCommand(String eclipseProjectName, String dockerBuildContext) {
 		// TODO Auto-generated method stub
 		
 	}

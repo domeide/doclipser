@@ -22,7 +22,7 @@ public class DockerBuildLaunchShortcut implements ILaunchShortcut2 {
 				IFile dockerfile = (IFile)selected;
 				IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
 				DockerClient dockerClient = DockerClientFactory.makeDockerClient();
-				dockerClient.defaultBuildCommand(dockerfilePath.toOSString());
+				dockerClient.defaultBuildCommand(dockerfile.getProject().getName(), dockerfilePath.toOSString());
 			}
 		}
 	}

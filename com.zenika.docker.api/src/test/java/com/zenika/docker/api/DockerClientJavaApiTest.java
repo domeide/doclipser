@@ -22,13 +22,13 @@ public class DockerClientJavaApiTest {
 	@Test
 	public void testDefaultBuildCommand() {
 		String buildContextPath = "src/test/resources/simplestDockerBuildContext";
-		client.defaultBuildCommand(buildContextPath);
+		client.defaultBuildCommand(null, buildContextPath);
 	}
 
 	@Test
 	public void testDefaultRunCommand() {
 		String buildContextPath = "src/test/resources/simplestDockerBuildContext";
-		client.defaultRunCommand(buildContextPath);
+		client.defaultRunCommand(null, buildContextPath);
 	}
 
 }
