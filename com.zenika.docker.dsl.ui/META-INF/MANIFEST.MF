@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.zenika.docker.dsl.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0
 Bundle-SymbolicName: com.zenika.docker.dsl.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.zenika.docker.dsl;visibility:=reexport,

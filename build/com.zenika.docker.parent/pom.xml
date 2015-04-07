@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.zenika.docker</groupId>
 	<artifactId>com.zenika.docker.parent</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<packaging>pom</packaging>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/domeide/doclipser/build/com.zenika.docker.parent/</developerConnection>
+	  <tag>v0.1.0</tag>
+  </scm>
 
 	<properties>
 		<tycho-version>0.22.0</tycho-version>
@@ -21,7 +25,7 @@
 			<id>eclipse.xtend</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
-		</repository>		
+		</repository>
 	</repositories>
 
 	<build>
@@ -39,11 +43,8 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-				<!-- 
-					<dependency-resolution>
-						<optionalDependencies>ignore</optionalDependencies>
-					</dependency-resolution>
-				 -->
+					<!-- <dependency-resolution> <optionalDependencies>ignore</optionalDependencies> 
+						</dependency-resolution> -->
 					<environments>
 
 						<environment>
@@ -51,11 +52,11 @@
 							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
-			            <environment>
-			              <os>linux</os>
-			              <ws>gtk</ws>
-			              <arch>x86_64</arch>
-			            </environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
