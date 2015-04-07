@@ -1,5 +1,5 @@
 # Doclipser
-### Doclipser brings Docker in Eclipse IDE in a simple and effective way.
+Dockerfile and Docker basic support in Eclipse
 
 ![image](images/doclipser.gif)
 
