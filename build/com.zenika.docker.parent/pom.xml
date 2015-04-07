@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.zenika.docker</groupId>
 	<artifactId>com.zenika.docker.parent</artifactId>
-	<version>0.1.0</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<scm>
@@ -29,6 +29,15 @@
 	</repositories>
 
 	<build>
+		<pluginManagement>
+      		<plugins>
+        		<plugin>
+          			<groupId>org.eclipse.tycho</groupId>
+          			<artifactId>tycho-versions-plugin</artifactId>
+          			<version>0.22.0</version>
+        		</plugin>
+       		</plugins>
+    	</pluginManagement>
 		<plugins>
 			<plugin>
 				<!-- enable tycho build extension -->

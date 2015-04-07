@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>com.zenika.docker</groupId>
 		<artifactId>com.zenika.docker.parent</artifactId>
-		<version>0.1.0</version>
+		<version>0.2.0-SNAPSHOT</version>
 		<relativePath>../com.zenika.docker.parent/pom.xml</relativePath>
 	</parent>
 
 	<groupId>com.zenika.docker</groupId>
 	<artifactId>com.zenika.docker.features.dockerfileeditor</artifactId>
-	<version>0.1.0</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
 
 </project>
