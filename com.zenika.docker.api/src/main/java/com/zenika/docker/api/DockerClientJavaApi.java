@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.util.concurrent.ExecutorService;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.LineIterator;
@@ -62,7 +61,7 @@ public class DockerClientJavaApi implements DockerClient {
 			};
 
 			// start event processing thread
-			ExecutorService executorService = dockerClient.eventsCmd(eventCallback).exec();
+			dockerClient.eventsCmd(eventCallback).exec();
 		
 
 	}

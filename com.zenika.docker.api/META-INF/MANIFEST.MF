@@ -4,7 +4,7 @@ Bundle-Name: Zenika Docker API Client
 Bundle-SymbolicName: com.zenika.docker.api;singleton:=true
 Bundle-Version: 0.2.0.qualifier
 Bundle-Vendor: Zenika
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: .,
  jars/docker-java-1.0.1-SNAPSHOT-jar-with-dependencies.jar,
  jars/com/spotify/docker-client/2.7.7/docker-client-2.7.7.jar,
@@ -17,9 +17,9 @@ Export-Package: com.github.dockerjava.api,
  com.github.dockerjava.api.model,
  com.github.dockerjava.core,
  com.zenika.docker.api
-Require-Bundle: org.junit,
- org.slf4j.api;bundle-version="1.7.2",
- org.eclipse.ui.console;bundle-version="3.5.300",
- org.eclipse.core.runtime;bundle-version="3.10.0",
- org.eclipse.ui;bundle-version="3.106.0"
-Import-Package: org.eclipse.jface.resource
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
+ org.eclipse.ui.workbench,
+ org.junit
+Import-Package: org.eclipse.jface.resource,
+ org.eclipse.ui.console
+Eclipse-BundleShape: dir
