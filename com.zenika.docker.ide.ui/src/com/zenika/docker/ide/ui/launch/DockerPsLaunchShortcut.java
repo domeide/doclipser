@@ -1,11 +1,9 @@
 package com.zenika.docker.ide.ui.launch;
 
-import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.ui.ILaunchShortcut2;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
 
@@ -16,25 +14,26 @@ public class DockerPsLaunchShortcut implements ILaunchShortcut2 {
 
 	@Override
 	public void launch(ISelection sel, String mode) {
-		if (sel instanceof IStructuredSelection) {
-			Object selected = ((IStructuredSelection) sel).getFirstElement();
-			if (selected instanceof IFile) {
-				Display.getDefault().asyncExec(new Runnable() {
-					@Override
-					public void run() {
-						DockerClient dockerClient = DockerClientFactory
-								.makeDockerClient();
-						dockerClient.defaultPsCommand();
-					}
-				});
+		Display.getDefault().asyncExec(new Runnable() {
+			@Override
+			public void run() {
+				DockerClient dockerClient = DockerClientFactory
+						.makeDockerClient();
+				dockerClient.defaultPsCommand();
 			}
-		}
+		});
 	}
 
 	@Override
 	public void launch(IEditorPart editor, String mode) {
-		// TODO Auto-generated method stub
-
+		Display.getDefault().asyncExec(new Runnable() {
+			@Override
+			public void run() {
+				DockerClient dockerClient = DockerClientFactory
+						.makeDockerClient();
+				dockerClient.defaultPsCommand();
+			}
+		});
 	}
 
 	@Override
