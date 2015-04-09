@@ -7,6 +7,7 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.ui.ILaunchShortcut2;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
 
 import com.zenika.docker.api.DockerClient;
@@ -19,10 +20,18 @@ public class DockerRunLaunchShortcut implements ILaunchShortcut2 {
 		if (sel instanceof IStructuredSelection) {
 			Object selected = ((IStructuredSelection) sel).getFirstElement();
 			if (selected instanceof IFile) {
-				IFile dockerfile = (IFile)selected;
-				IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
-				DockerClient dockerClient = DockerClientFactory.makeDockerClient();
-				dockerClient.defaultRunCommand(dockerfile.getProject().getName(), dockerfilePath.toOSString());
+				final IFile dockerfile = (IFile)selected;
+				final IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
+
+				Display.getDefault().asyncExec(new Runnable() {
+					@Override
+					public void run() {
+						DockerClient dockerClient = DockerClientFactory
+								.makeDockerClient();
+						dockerClient.defaultRunCommand(dockerfile.getProject()
+								.getName(), dockerfilePath.toOSString());
+					}
+				});
 			}
 		}
 	}
