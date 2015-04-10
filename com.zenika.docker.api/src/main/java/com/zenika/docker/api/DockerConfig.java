@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
 
+import org.eclipse.core.runtime.FileLocator;
+
 import com.google.common.io.ByteSource;
 import com.google.common.io.Resources;
 
@@ -16,9 +18,13 @@ public class DockerConfig {
 	private final String email;
 	private final String serverAddress;
 	private final String dockerCertPath;
+	private final String propertiesFileFullPath;
 
 	public DockerConfig() {
-		Properties properties = getPropertyFile();
+		final URL url = Resources.getResource(Constants.PROPERTY_FILE_NAME);
+		Properties properties = readPropertyFile(url);
+		
+		
 		version = properties.getProperty(Constants.PROPERTY_DOCKER_API_VERSION);
 		uri = properties.getProperty(Constants.PROPERTY_DOCKER_URI);
 		username = properties.getProperty(Constants.PROPERTY_USERNAME);
@@ -28,10 +34,17 @@ public class DockerConfig {
 				.getProperty(Constants.PROPERTY_DOCKER_SERVER_ADDRESS);
 		dockerCertPath = properties
 				.getProperty(Constants.PROPERTY_DOCKER_CERT_PATH);
+
+		URL fullUrl = null;
+		try {
+			fullUrl = FileLocator.resolve(url);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		propertiesFileFullPath = fullUrl == null ? null : fullUrl.getPath();
 	}
 
-	private Properties getPropertyFile() {
-		final URL url = Resources.getResource(Constants.PROPERTY_FILE_NAME);
+	private Properties readPropertyFile(URL url) {
 		final ByteSource byteSource = Resources.asByteSource(url);
 		final Properties properties = new Properties();
 		InputStream inputStream = null;
@@ -78,5 +91,9 @@ public class DockerConfig {
 
 	public String getDockerCertPath() {
 		return dockerCertPath;
+	}
+
+	public String getPropertiesFileFullPath() {
+		return propertiesFileFullPath;
 	}
 }
