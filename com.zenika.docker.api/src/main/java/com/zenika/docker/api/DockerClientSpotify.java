@@ -15,6 +15,7 @@ import com.spotify.docker.client.DockerCertificates;
 import com.spotify.docker.client.DockerClient.ListContainersParam;
 import com.spotify.docker.client.DockerClient.LogsParameter;
 import com.spotify.docker.client.DockerException;
+import com.spotify.docker.client.DockerTimeoutException;
 import com.spotify.docker.client.LogStream;
 import com.spotify.docker.client.ProgressHandler;
 import com.spotify.docker.client.messages.Container;
@@ -29,10 +30,11 @@ public class DockerClientSpotify implements DockerClient {
 
 	private final DockerClientMessageConsole messageConsole;
 	private final com.spotify.docker.client.DockerClient dockerClient;
+	private DockerConfig dockerConfig;
 
 	public DockerClientSpotify() {
 		messageConsole = new DockerClientMessageConsole(Constants.CONSOLE_NAME);
-		DockerConfig dockerConfig = new DockerConfig();
+		dockerConfig = new DockerConfig();
 
 		final String endpoint = dockerConfig.getUri();
 		final String dockerCertPath = dockerConfig.getDockerCertPath();
@@ -75,6 +77,8 @@ public class DockerClientSpotify implements DockerClient {
 
 			messageConsole.getDockerConsoleOut().println(
 					"[INFO] docker build completed");
+		} catch (DockerTimeoutException e) {
+			printDockerTimeoutExceptionMessage();
 		} catch (DockerException e) {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
@@ -85,6 +89,15 @@ public class DockerClientSpotify implements DockerClient {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
 		}
+	}
+
+	private void printDockerTimeoutExceptionMessage() {
+		messageConsole.getDockerConsoleOut().println("[ERROR] Docker is not responding. Possible causes are: ");
+		messageConsole.getDockerConsoleOut().println("    1) Docker engine is not started or not installed.");
+		messageConsole.getDockerConsoleOut().println("\tPlease refer to https://docs.docker.com/installation/.");
+		messageConsole.getDockerConsoleOut().println("    2) Doclipser is not configured correctly:");
+		messageConsole.getDockerConsoleOut().println("\tPlease verify properties file and edit it as needed.");
+		messageConsole.getDockerConsoleOut().println("\tProperties file can be found here: " + dockerConfig.getPropertiesFileFullPath());
 	}
 
 	@Override
@@ -113,7 +126,7 @@ public class DockerClientSpotify implements DockerClient {
 				portBindings.put(port, hostPorts);
 			}
 			final HostConfig hostConfig = HostConfig.builder()
-					.portBindings(portBindings).build();
+					.portBindings(portBindings).publishAllPorts(true).build();
 
 			final ContainerCreation creation = dockerClient.createContainer(
 					config, containerName);
@@ -140,6 +153,8 @@ public class DockerClientSpotify implements DockerClient {
 			messageConsole.getDockerConsoleOut().println(
 					"[INFO] docker run completed (container_id=" + id + ")");
 
+		} catch (DockerTimeoutException e) {
+			printDockerTimeoutExceptionMessage();
 		} catch (DockerException e) {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
@@ -170,13 +185,6 @@ public class DockerClientSpotify implements DockerClient {
 			List<Container> containers = dockerClient
 					.listContainers(ListContainersParam.allContainers());
 
-			if (containers.isEmpty()) {
-				messageConsole
-						.getDockerConsoleOut()
-						.println(
-								"[WARNING]\t\tNo container found. Have you already tried to run the container?");
-			}
-
 			for (Container c : containers) {
 				for (String cName : c.names()) {
 					if (cName.equals("/" + containerName)) {
@@ -190,7 +198,7 @@ public class DockerClientSpotify implements DockerClient {
 				messageConsole
 						.getDockerConsoleOut()
 						.println(
-								"[WARNING]\t\tNo container found with this name. Have you already tried to run the container?");
+								"[WARNING] No container found with this name. Remove aborted");
 				return;
 			}
 
@@ -203,8 +211,10 @@ public class DockerClientSpotify implements DockerClient {
 
 			dockerClient.removeContainer(containerId);
 
-			messageConsole.getDockerConsoleOut().println("[INFO] Remove done.");
+			messageConsole.getDockerConsoleOut().println("[INFO] Remove completed.");
 
+		} catch (DockerTimeoutException e) {
+			printDockerTimeoutExceptionMessage();
 		} catch (DockerException e) {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
@@ -223,14 +233,16 @@ public class DockerClientSpotify implements DockerClient {
 
 			if (containers.isEmpty()) {
 				messageConsole.getDockerConsoleOut().println(
-						"[INFO]\tNo running container.");
+						"[INFO] No running container.");
 			}
 
 			for (Container c : containers) {
 				messageConsole.getDockerConsoleOut().println(
-						"[INFO]\t" + c.toString());
+						"[INFO] " + c.toString());
 			}
 
+		} catch (DockerTimeoutException e) {
+			printDockerTimeoutExceptionMessage();
 		} catch (DockerException e) {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
@@ -254,13 +266,6 @@ public class DockerClientSpotify implements DockerClient {
 
 			List<Container> containers = dockerClient
 					.listContainers(ListContainersParam.allContainers());
-
-			if (containers.isEmpty()) {
-				messageConsole
-						.getDockerConsoleOut()
-						.println(
-								"[WARNING] No container found. Have you already tried to run the container?");
-			}
 
 			for (Container c : containers) {
 				for (String cName : c.names()) {
@@ -292,6 +297,8 @@ public class DockerClientSpotify implements DockerClient {
 										.decode(stream.next().content()));
 			}
 
+		} catch (DockerTimeoutException e) {
+			printDockerTimeoutExceptionMessage();
 		} catch (DockerException e) {
 			messageConsole.getDockerConsoleOut().println(
 					"[ERROR] " + e.toString());
