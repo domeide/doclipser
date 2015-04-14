@@ -17,7 +17,8 @@ Export-Package: com.github.dockerjava.api,
  com.github.dockerjava.api.model,
  com.github.dockerjava.core,
  com.zenika.docker.api
-Require-Bundle: org.eclipse.core.runtime
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit
 Import-Package: org.eclipse.jface.resource,
  org.eclipse.ui.console
 Eclipse-BundleShape: dir
