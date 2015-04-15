@@ -1,30 +1,28 @@
-# Doclipser
-Dockerfile and Docker basic support in Eclipse
+![image](images/doclipser_main_logo.png)
+# doclipser
+Edit, build, run Docker containers from within Eclipse IDE
 
-![image](images/doclipser.gif)
-
-#### Dockerfile Syntax Highlighting
+#### Main features
+Dockerfile Syntax Highlighting
 ![image](images/syntax-highlighting.gif)
 
-#### Dockerfile Auto Complete
+Dockerfile Auto Complete
 ![image](images/auto-completion.gif)
 
-#### Docker commands
+Docker commands
 ![image](images/run-as-screenshot.gif)
-
-
 
 
 ## Installation
 
-Direct plugin link: 
+Direct plugin link: https://dl.bintray.com/zenika/doclipser
 
-This procedure installs the doclipser Plugin for Eclipse.
+The detailed procedure to installs plugin:
 
 1. Start Eclipse
 Select Help > Install New Software... In the dialog that appears, enter the update site URL into the Work with text box:
 
-https://<TODO>
+https://dl.bintray.com/zenika/doclipser
 
 And press the enter key.
 
