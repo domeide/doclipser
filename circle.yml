@@ -4,6 +4,6 @@ general:
 
 dependencies:
   post:
-    - mvn clean install
+    - mvn clean install:
       pwd:
         build/com.zenika.docker.parent
