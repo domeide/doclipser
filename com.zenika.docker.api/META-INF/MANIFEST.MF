@@ -6,12 +6,8 @@ Bundle-Version: 0.2.0.qualifier
 Bundle-Vendor: Zenika
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: .,
- jars/docker-java-1.0.1-SNAPSHOT-jar-with-dependencies.jar,
- jars/com/spotify/docker-client/2.7.7/docker-client-2.7.7.jar,
- jars/jersey-client-2.13.jar,
- jars/jersey-media-json-jackson-2.13.jar,
- jars/jackson-jaxrs-base-2.2.3.jar,
- jars/jackson-datatype-guava-2.2.3.jar
+ jars/docker-client-2.7.20-SNAPSHOT-shaded.jar,
+ jars/docker-java-1.0.1-SNAPSHOT-jar-with-dependencies.jar
 Export-Package: com.github.dockerjava.api,
  com.github.dockerjava.api.command,
  com.github.dockerjava.api.model,
