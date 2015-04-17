@@ -1,0 +1,9 @@
+general:
+  artifacts:
+    - "build/com.zenika.docker.repository/com.zenika.docker.repository*.zip"
+
+dependencies:
+  post:
+    - mvn clean install
+      pwd:
+        build/com.zenika.docker.parent
