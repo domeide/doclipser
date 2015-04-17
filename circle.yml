@@ -6,4 +6,4 @@ dependencies:
   post:
     - mvn clean install:
       pwd:
-        build/com.zenika.docker.parent
+        "build/com.zenika.docker.parent"
