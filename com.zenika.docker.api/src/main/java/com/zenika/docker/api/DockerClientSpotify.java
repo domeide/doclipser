@@ -41,6 +41,7 @@ public class DockerClientSpotify implements DockerClient {
 
 		final DefaultDockerClient.Builder builder = new DefaultDockerClient.Builder();
 		builder.uri(endpoint);
+		builder.readTimeoutMillis(DefaultDockerClient.NO_TIMEOUT);
 
 		if (dockerCertPath != null && !dockerCertPath.isEmpty()) {
 			try {
