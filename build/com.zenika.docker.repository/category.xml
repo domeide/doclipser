@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.zenika.docker.features.dockerfileeditor_0.2.0.qualifier.jar" id="com.zenika.docker.features.dockerfileeditor" version="0.2.0.qualifier" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
+   <feature url="features/com.zenika.docker.features.dockerfileeditor_0.2.0.jar" id="com.zenika.docker.features.dockerfileeditor" version="0.2.0" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
       <category name="DockerfileEditor"/>
    </feature>
-   <feature url="features/com.zenika.docker.features.dockerclient_0.2.0.qualifier.jar" id="com.zenika.docker.features.dockerclient" version="0.2.0.qualifier">
+   <feature url="features/com.zenika.docker.features.dockerclient_0.2.0.jar" id="com.zenika.docker.features.dockerclient" version="0.2.0">
       <category name="DockerApiClient"/>
    </feature>
    <category-def name="DockerfileEditor" label="Dockerfile editor">
