@@ -49,8 +49,8 @@ And press the enter key.
 ## Credits
 * [Spotify Java Docker API](https://github.com/spotify/docker-client)
 * [Xtext](https://eclipse.org/Xtext/) framework for the Dockerfile grammar definition
-* [BinTray distribution service](bintray.com)
-* [Docker Inc. ;-)](docker.com)
+* [BinTray distribution service](http://bintray.com)
+* [Docker Inc. ;-)](http://docker.com)
 
 ## License
 [Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html)
