@@ -4,11 +4,11 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-//var grammarURI = "classpath:/com/zenika/docker/dsl/DockerfileDsl.xtext"
-var grammarURI = "platform:/resource/${projectName}/src/com/zenika/docker/dsl/DockerfileDsl.xtext"
 var fileExtensions = "Dockerfile"
 var projectName = "com.zenika.docker.dsl"
 var runtimeProject = "../${projectName}"
+//var grammarURI = "classpath:/com/zenika/docker/dsl/DockerfileDsl.xtext"
+var grammarURI = "platform:/resource/${projectName}/src/com/zenika/docker/dsl/DockerfileDsl.xtext"
 var generateXtendStub = true
 var encoding = "UTF-8"
 
