@@ -13,6 +13,7 @@
 
     <properties>
         <tycho-version>0.22.0</tycho-version>
+        <xtext-version>2.7.2</xtext-version>
     </properties>
 
     <repositories>
@@ -34,14 +35,12 @@
 				<plugin>
 					<groupId>org.eclipse.xtend</groupId>
 					<artifactId>xtend-maven-plugin</artifactId>
-					<version>${xtext.version}</version>
+					<version>${xtext-version}</version>
 					<executions>
 						<execution>
+							<phase>generate-sources</phase>
 							<goals>
 								<goal>compile</goal>
-								<goal>xtend-install-debug-info</goal>
-								<goal>testCompile</goal>
-								<goal>xtend-test-install-debug-info</goal>
 							</goals>
 						</execution>
 					</executions>
@@ -72,7 +71,7 @@
                 <plugin>
                     <groupId>org.eclipse.tycho</groupId>
                     <artifactId>tycho-versions-plugin</artifactId>
-                    <version>0.22.0</version>
+                    <version>${tycho-version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -91,7 +90,14 @@
                 <version>${tycho-version}</version>
                 <configuration>
                     <!-- <dependency-resolution> <optionalDependencies>ignore</optionalDependencies> 
-                        </dependency-resolution> -->
+                        </dependency-resolution> 
+           			<target>
+						<artifact>
+							<groupId>com.zenika.docker</groupId>
+							<artifactId>com.zenika.docker.dsl</artifactId>
+							<version>0.3.0-SNAPSHOT</version>
+						</artifact>
+					</target>    -->
                     <environments>
 
                         <environment>
