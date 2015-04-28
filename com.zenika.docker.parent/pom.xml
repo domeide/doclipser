@@ -128,11 +128,11 @@
 
     <!-- the modules that should be built together -->
     <modules>
-        <module>../../com.zenika.docker.api</module>
-        <module>../../com.zenika.docker.dsl</module>
-        <module>../../com.zenika.docker.dsl.ui</module>
-        <module>../../com.zenika.docker.dsl.ui.ext</module>
-        <module>../../com.zenika.docker.ide.ui</module>
+        <module>../com.zenika.docker.api</module>
+        <module>../com.zenika.docker.dsl</module>
+        <module>../com.zenika.docker.dsl.ui</module>
+        <module>../com.zenika.docker.dsl.ui.ext</module>
+        <module>../com.zenika.docker.ide.ui</module>
         <module>../com.zenika.docker.features.dockerfileeditor</module>
         <module>../com.zenika.docker.features.dockerclient</module>
         <module>../com.zenika.docker.repository</module>

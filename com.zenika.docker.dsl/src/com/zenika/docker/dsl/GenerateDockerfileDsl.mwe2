@@ -8,18 +8,12 @@ var fileExtensions = "Dockerfile"
 var projectName = "com.zenika.docker.dsl"
 var runtimeProject = "../${projectName}"
 //var grammarURI = "classpath:/com/zenika/docker/dsl/DockerfileDsl.xtext"
-var grammarURI = "platform:/resource/../${projectName}/src/com/zenika/docker/dsl/DockerfileDsl.xtext"
+var grammarURI = "platform:/resource/${projectName}/src/com/zenika/docker/dsl/DockerfileDsl.xtext"
 var generateXtendStub = true
 var encoding = "UTF-8"
 
 Workflow {
     bean = StandaloneSetup {
-    	scanClassPath = true
-    	platformUri = "${runtimeProject}/.."
-    	// The following two lines can be removed, if Xbase is not used.
-    	registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-    	registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
-
         // use an XtextResourceset throughout the process, which is able to resolve classpath:/ URIs.
         resourceSet = org.eclipse.xtext.resource.XtextResourceSet:theResourceSet {}
           
@@ -32,10 +26,11 @@ Workflow {
             from = "platform:/resource/org.eclipse.xtext.common.types/"
             to = "classpath:/"
           }
-        uriMap = {
-            from = "platform:/resource/../${projectName}/src/"
-            to = "classpath:/"
-          }
+    	
+    	platformUri = "${runtimeProject}/.."
+    	// The following two lines can be removed, if Xbase is not used.
+    	registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
+    	registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
     }
     
     component = DirectoryCleaner {

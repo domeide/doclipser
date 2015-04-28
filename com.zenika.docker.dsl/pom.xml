@@ -6,7 +6,7 @@
 		<groupId>com.zenika.docker</groupId>
 		<artifactId>com.zenika.docker.parent</artifactId>
 		<version>0.3.0-SNAPSHOT</version>
-		<relativePath>../build/com.zenika.docker.parent/pom.xml</relativePath>
+		<relativePath>../com.zenika.docker.parent/pom.xml</relativePath>
 	</parent>
 
 	<groupId>com.zenika.docker</groupId>
@@ -35,7 +35,6 @@
 			      <argument>/${project.basedir}/src/com/zenika/docker/dsl/GenerateDockerfileDsl.mwe2</argument>
 			    </arguments>
 			    <includePluginDependencies>true</includePluginDependencies>
-			    <workingDirectory>/${project.basedir}/</workingDirectory>
 			  </configuration>
 			  <dependencies>
 			    <dependency>
@@ -47,11 +46,6 @@
 			      <groupId>org.eclipse.xtext</groupId>
 			      <artifactId>org.eclipse.xtext.xbase</artifactId>
 			      <version>${xtext-version}</version>
-			    </dependency>
-			    <dependency>
-					<groupId>com.zenika.docker</groupId>
-					<artifactId>com.zenika.docker.dsl</artifactId>
-					<version>0.3.0-SNAPSHOT</version>
 			    </dependency>
 			  </dependencies>
 			</plugin>
