@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.zenika.docker</groupId>
-		<artifactId>com.zenika.docker.parent</artifactId>
-		<version>0.2.0-SNAPSHOT</version>
-		<relativePath>../build/com.zenika.docker.parent/pom.xml</relativePath>
-	</parent>
+    <parent>
+        <groupId>com.zenika.docker</groupId>
+        <artifactId>com.zenika.docker.parent</artifactId>
+        <version>0.3.0-SNAPSHOT</version>
+        <relativePath>../com.zenika.docker.parent/pom.xml</relativePath>
+    </parent>
 
-	<groupId>com.zenika.docker</groupId>
-	<artifactId>com.zenika.docker.dsl.tests</artifactId>
-	<version>0.2.0-SNAPSHOT</version>
-	<packaging>eclipse-plugin</packaging>
+    <artifactId>com.zenika.docker.dsl.tests</artifactId>
+    <packaging>eclipse-test-plugin</packaging>
 
+    <name>Dockerfile Language Tests</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>gen-clean</id>
+                        <phase>clean</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.xtend</groupId>
+                <artifactId>xtend-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-surefire-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <useUIHarness>true</useUIHarness>
+                    <useUIThread>false</useUIThread>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
