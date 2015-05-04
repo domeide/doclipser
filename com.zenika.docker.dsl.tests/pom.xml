@@ -14,8 +14,6 @@
     <artifactId>com.zenika.docker.dsl.tests</artifactId>
     <packaging>eclipse-test-plugin</packaging>
 
-    <name>Dockerfile Language Tests</name>
-
     <build>
         <plugins>
             <plugin>
@@ -37,9 +35,6 @@
                 <artifactId>tycho-surefire-plugin</artifactId>
                 <version>${tycho-version}</version>
                 <configuration>
-                    <useUIHarness>true</useUIHarness>
-                    <useUIThread>false</useUIThread>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>

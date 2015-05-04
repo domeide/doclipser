@@ -18,7 +18,7 @@ Require-Bundle: com.zenika.docker.dsl;visibility:=reexport,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.zenika.docker.dsl.ui.quickfix,
  com.zenika.docker.dsl.ui.contentassist,
  com.zenika.docker.dsl.ui.contentassist.antlr,
