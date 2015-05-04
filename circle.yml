@@ -11,5 +11,4 @@ general:
 
 dependencies:
     post:
-        - mvn clean install:
-            pwd: com.zenika.docker.parent
+        - mvn clean install
