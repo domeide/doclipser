@@ -71,4 +71,6 @@ buildNumber.properties
 com.zenika.docker.dsl.ui/src-gen/
 com.zenika.docker.dsl/model/generated/
 com.zenika.docker.dsl/src-gen/
+com.zenika.docker.dsl/xtend-gen/
+com.zenika.docker.dsl.tests/src-gen/
 com.zenika.docker.dsl.tests/xtend-gen/
