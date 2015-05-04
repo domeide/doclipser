@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Zenika Docker API Client
 Bundle-SymbolicName: com.zenika.docker.api;singleton:=true
-Bundle-Version: 0.3.0.qualifier
+Bundle-Version: 0.3.0
 Bundle-Vendor: Zenika
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: .,
