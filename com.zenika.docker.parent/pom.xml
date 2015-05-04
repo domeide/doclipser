@@ -132,9 +132,7 @@
         <module>../com.zenika.docker.dsl</module>
         <module>../com.zenika.docker.dsl.ui</module>
         <module>../com.zenika.docker.dsl.ui.ext</module>
-        <!-- 
-             <module>../com.zenika.docker.dsl.tests</module>
-         -->
+        <module>../com.zenika.docker.dsl.tests</module>
         <module>../com.zenika.docker.ide.ui</module>
         <module>../com.zenika.docker.features.dockerfileeditor</module>
         <module>../com.zenika.docker.features.dockerclient</module>
