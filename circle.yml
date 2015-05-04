@@ -7,8 +7,4 @@ machine:
 general:
     build_dir: com.zenika.docker.parent
     artifacts:
-        - "com.zenika.docker.repository/target/com.zenika.docker.repository*.zip"
-
-dependencies:
-    post:
-        - mvn clean install
+        - "../com.zenika.docker.repository/target/com.zenika.docker.repository*.zip"
