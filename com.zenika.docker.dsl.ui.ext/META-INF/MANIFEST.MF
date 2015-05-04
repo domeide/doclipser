@@ -5,4 +5,4 @@ Bundle-SymbolicName: com.zenika.docker.dsl.ui.ext;singleton:=true
 Bundle-Version: 0.3.0.qualifier
 Bundle-Vendor: Zenika
 Fragment-Host: com.zenika.docker.dsl.ui;bundle-version="0.1.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
