@@ -1,5 +1,5 @@
 ![image](images/doclipser_main_logo.png)
-#### Edit, build, run Docker containers from within Eclipse IDE
+#### Edit, build, run Docker containers from within Eclipse IDE [![Circle CI](https://circleci.com/gh/domeide/doclipser.png?style=shield)](https://circleci.com/gh/domeide/doclipser)
 
 ![image](images/syntax-highlighting.gif)
 ##### Dockerfile Syntax Highlighting
