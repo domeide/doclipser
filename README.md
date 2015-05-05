@@ -12,7 +12,7 @@
 
 ## Installation
 
-#### Direct plugin link: https://dl.bintray.com/zenika/doclipser
+#### Direct plugin link: [ ![Download](https://api.bintray.com/packages/zenika/doclipser/doclipser-p2-site/images/download.svg) ](https://dl.bintray.com/zenika/doclipser/)
 
 #### Detailed install procedure:
 
