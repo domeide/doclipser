@@ -10,5 +10,5 @@ general:
         - "../com.zenika.docker.repository/target/com.zenika.docker.repository*.zip"
 
 dependencies:
-    post:
-        - mvn clean install
+    override:
+        - mvn clean install dependency:resolve
