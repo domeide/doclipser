@@ -1,5 +1,5 @@
 ![image](images/doclipser_main_logo.png)
-#### Edit, build, run Docker containers from within Eclipse IDE [![Circle CI](https://circleci.com/gh/domeide/doclipser.png?style=shield)](https://circleci.com/gh/domeide/doclipser)
+#### Edit, build, run Docker containers from Eclipse [![Circle CI](https://circleci.com/gh/domeide/doclipser.png?style=shield)](https://circleci.com/gh/domeide/doclipser)
 
 ![image](images/syntax-highlighting.gif)
 ##### Dockerfile Syntax Highlighting
@@ -17,10 +17,7 @@
 #### Detailed install procedure:
 
 ##### 1. Start Eclipse
-Select Help > Install New Software... In the dialog that appears, enter the update site URL into the Work with text box:
-
-https://dl.bintray.com/zenika/doclipser
-
+Select Help > Install New Software... In the dialog that appears, enter the update site URL into the "Work with" text box: https://dl.bintray.com/zenika/doclipser
 And press the enter key.
 
 ##### 2. Select the checkbock next to the component you want to install and click Next.
@@ -31,7 +28,7 @@ And press the enter key.
 
 ##### 5. Click OK on the Security Warning.
 
-##### 6. You will then be asked be asked if you would like to restart Eclipse. Click Restart Now.
+##### 6. You will then be asked if you would like to restart Eclipse. Click Restart Now.
 
 ## Configuration
 
@@ -50,7 +47,7 @@ And press the enter key.
 * [Spotify Java Docker API](https://github.com/spotify/docker-client)
 * [Xtext](https://eclipse.org/Xtext/) framework for the Dockerfile grammar definition
 * [BinTray distribution service](http://bintray.com)
-* [Docker Inc. ;-)](http://docker.com)
+* [Docker](http://docker.com)
 
 ## License
 [Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html)
