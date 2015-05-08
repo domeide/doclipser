@@ -34,20 +34,30 @@ And press the enter key.
 
 ## Contributing
 
+#### Prerequisites
+1. JDK 7 or above
+2. Maven 3
+3. [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/lunasr2) with the following plugins :
+   * m2e - Maven Integration for Eclipse
+   * Xtext Complete SDK
+   * E4 Tools (optional)
+
+#### Workflow
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
+3. Build the project once to generate java code from xtext dsl definition: `cd com.zenika.docker.parent/ && mvn clean install`
+4. Import the projects into eclipse as Existing Maven Projects 
+5. To test and debug go to Run Configurations, select RunDoclipser and Run  
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## History
-2015-04-07 First draft available for internal review
 
 ## Credits
 * [Spotify Java Docker API](https://github.com/spotify/docker-client)
 * [Xtext](https://eclipse.org/Xtext/) framework for the Dockerfile grammar definition
 * [BinTray distribution service](http://bintray.com)
 * [Docker](http://docker.com)
+* [Zenika](http://zenika.com)
 
 ## License
 [Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html)
