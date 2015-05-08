@@ -16,6 +16,7 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
+!com.zenika.docker.dsl.ui/RunDoclipser.launch
 
 # CDT-specific
 .cproject
