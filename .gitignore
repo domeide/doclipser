@@ -21,7 +21,9 @@ local.properties
 .cproject
 
 # JDT-specific (Eclipse Java Development Tools)
-#.classpath
+.classpath
+.project
+!com.zenika.docker.dsl/.project
 
 # PDT-specific
 .buildpath
@@ -74,3 +76,4 @@ com.zenika.docker.dsl/src-gen/
 com.zenika.docker.dsl/xtend-gen/
 com.zenika.docker.dsl.tests/src-gen/
 com.zenika.docker.dsl.tests/xtend-gen/
+plugin.xml_gen
