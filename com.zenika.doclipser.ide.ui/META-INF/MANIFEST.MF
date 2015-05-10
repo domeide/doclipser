@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.zenika.doclipser.ide.ui
+Bundle-SymbolicName: com.zenika.doclipser.ide.ui;singleton:=true
+Bundle-Version: 0.4.0.qualifier
+Bundle-Activator: com.zenika.doclipser.ide.ui.DockerIDEUIActivator
+Bundle-Vendor: Zenika
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.zenika.doclipser.api,
+ org.eclipse.debug.ui,
+ org.eclipse.swt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.ui.editors.text
+Export-Package: com.zenika.doclipser.ide.ui

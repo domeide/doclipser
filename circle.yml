@@ -5,9 +5,9 @@ machine:
        version: openjdk7
 
 general:
-    build_dir: com.zenika.docker.parent
+    build_dir: com.zenika.doclipser.parent
     artifacts:
-        - "../com.zenika.docker.repository/target/com.zenika.docker.repository*.zip"
+        - "../com.zenika.doclipser.repository/target/com.zenika.doclipser.repository*.zip"
 
 dependencies:
     override:

@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Zenika Docker API Client
+Bundle-SymbolicName: com.zenika.doclipser.api;singleton:=true
+Bundle-Version: 0.4.0.qualifier
+Bundle-Vendor: Zenika
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ jars/docker-client-2.7.20-SNAPSHOT-shaded.jar,
+ jars/docker-java-1.0.1-SNAPSHOT-jar-with-dependencies.jar
+Export-Package: com.github.dockerjava.api,
+ com.github.dockerjava.api.command,
+ com.github.dockerjava.api.model,
+ com.github.dockerjava.core,
+ com.zenika.doclipser.api
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit
+Import-Package: org.eclipse.jface.resource,
+ org.eclipse.ui.console
+Eclipse-BundleShape: dir

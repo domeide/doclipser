@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.zenika.doclipser.dsl.ui.ext
+Bundle-SymbolicName: com.zenika.doclipser.dsl.ui.ext;singleton:=true
+Bundle-Version: 0.4.0.qualifier
+Bundle-Vendor: Zenika
+Fragment-Host: com.zenika.doclipser.dsl.ui;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

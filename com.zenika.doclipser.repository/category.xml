@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2015 Zenika
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+    Mario Loriedo @mariolet - Initial implementation
+
+-->
+<site>
+   <feature url="features/com.zenika.doclipser.features.dockerfileeditor_0.4.0.qualifier.jar" id="com.zenika.doclipser.features.dockerfileeditor" version="0.4.0.qualifier" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
+      <category name="DockerfileEditor"/>
+   </feature>
+   <feature url="features/com.zenika.doclipser.features.dockerclient_0.4.0.qualifier.jar" id="com.zenika.doclipser.features.dockerclient" version="0.4.0.qualifier">
+      <category name="DockerApiClient"/>
+   </feature>
+   <category-def name="DockerfileEditor" label="Dockerfile editor">
+      <description>
+         Eclipse plugins for Dockerfile editing
+      </description>
+   </category-def>
+   <category-def name="DockerApiClient" label="Docker API Client">
+      <description>
+         Client to Docker API
+      </description>
+   </category-def>
+</site>
