@@ -76,3 +76,14 @@ src-gen/
 xtend-gen/
 com.zenika.doclipser.dsl/model/generated/
 plugin.xml_gen
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/formatting/
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/generator/
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/scoping/
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/validation/
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/DockerfileDslRuntimeModule.java
+com.zenika.doclipser.dsl/src/com/zenika/doclipser/dsl/DockerfileDslStandaloneSetup.java
+com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/contentassist/
+com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/labeling/
+com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/outline/
+com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/quickfix/
+com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/DockerfileDslUiModule.java
