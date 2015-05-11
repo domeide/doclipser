@@ -46,7 +46,10 @@ And press the enter key.
 #### Workflow
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
-3. Build the project once to generate java code from xtext dsl definition: `cd com.zenika.doclipser.parent/ && mvn clean install`
+3. Build the project once to generate java code from xtext dsl definition:
+   ``` bash
+   cd com.zenika.doclipser.parent/ &&  export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m" && mvn clean install
+   ```
 4. Import the projects into eclipse as Existing Maven Projects 
 5. To test and debug go to Run Configurations, select RunDoclipser and Run  
 3. Commit your changes: `git commit -am 'Add some feature'`
