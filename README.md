@@ -1,15 +1,8 @@
 #### Edit, build, run Docker containers from Eclipse [![Circle CI](https://circleci.com/gh/domeide/doclipser.png?style=shield)](https://circleci.com/gh/domeide/doclipser) [ ![Download](https://api.bintray.com/packages/zenika/doclipser/doclipser-p2-site/images/download.svg) ](https://dl.bintray.com/zenika/doclipser/)
-
 ![image](images/doclipser_main_logo.png)
 
-![image](images/syntax-highlighting.gif)
-##### Dockerfile Syntax Highlighting
+![image](images/doclipserdemo.gif)
 
-![image](images/auto-completion.gif)
-##### Dockerfile Auto Complete
-
-![image](images/run-as-screenshot.gif)
-##### Execute Docker commands
 
 ## Installation
 
