@@ -3,6 +3,11 @@
 
 ![image](images/doclipserdemo.gif)
 
+## Features
+
+![image](images/run-as-screenshot.gif)
+* Dockerfile syntax highlighting and autocomplete
+* Support for the following docker commands: `build`, `run`, `ps`, `logs`, `rm`
 
 ## Installation
 
@@ -23,11 +28,6 @@ And press the enter key.
 ###### 5. Click OK on the Security Warning.
 
 ###### 6. You will then be asked if you would like to restart Eclipse. Click Restart Now.
-
-## Features
-
-* Dockerfile syntax highlighting and autocomplete
-* Support for the following docker commands: `build`, `run`, `ps`, `logs`, `rm`
 
 ## Configuration
 
