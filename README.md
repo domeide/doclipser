@@ -6,8 +6,15 @@
 ## Features
 
 ![image](images/run-as-screenshot.gif)
+
+Currently supported features are:
 * Dockerfile syntax highlighting and autocomplete
 * Support for the following docker commands: `build`, `run`, `ps`, `logs`, `rm`
+
+Even if this is still a working progress project, we believe some people can still find it useful.
+We plan to provide support for docker compose (fig) yml files too (and therefore volumes and links). 
+
+Although this plugin focus on running containers through the support of Dockerfiles and Compose yml files in eclipse, there is another interesting project from JBoss that has a slightly different approach : it provides a more advanced management of Docker images and containers without Dockerfiles support : http://tools.jboss.org/blog/2015-03-30-Eclipse_Docker_Tooling.html.
 
 ## Installation
 
@@ -30,6 +37,8 @@ And press the enter key.
 ###### 6. You will then be asked if you would like to restart Eclipse. Click Restart Now.
 
 ## Configuration
+
+In order to run docker commands doclipser need to be configured to connect to a running docker engine. 
 
 #### On Linux
 Make sure you can run docker without sudo (i.e. [user belongs to docker group](https://docs.docker.com/installation/ubuntulinux/#create-a-docker-group))
