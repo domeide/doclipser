@@ -12,7 +12,7 @@ Currently supported features are:
 * Support for the following docker commands: `build`, `run`, `ps`, `logs`, `rm`
 
 Even if this is still a working progress project, we believe some people can still find it useful.
-We plan to provide support for docker compose (fig) yml files too (and therefore volumes and links). 
+We plan to provide support for docker compose yml files too (and therefore volumes and links). 
 
 Although this plugin focus on running containers through the support of Dockerfiles and Compose yml files in eclipse, there is another interesting project from JBoss that has a slightly different approach : it provides a more advanced management of Docker images and containers without Dockerfiles support : http://tools.jboss.org/blog/2015-03-30-Eclipse_Docker_Tooling.html.
 
