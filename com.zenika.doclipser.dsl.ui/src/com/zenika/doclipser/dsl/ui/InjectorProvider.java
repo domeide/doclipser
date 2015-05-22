@@ -16,8 +16,8 @@ import com.google.inject.Injector;
 import com.zenika.doclipser.dsl.ui.internal.DockerfileDslActivator;
 
 public class InjectorProvider {
-	public Injector getInjector() {
-		return DockerfileDslActivator.getInstance().getInjector(
-				COM_ZENIKA_DOCLIPSER_DSL_DOCKERFILEDSL);
-	}
+    public Injector getInjector() {
+        return DockerfileDslActivator.getInstance().getInjector(
+                COM_ZENIKA_DOCLIPSER_DSL_DOCKERFILEDSL);
+    }
 }

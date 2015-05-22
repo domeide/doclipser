@@ -22,24 +22,24 @@ import com.zenika.doclipser.dsl.resource.DockerfileContentHandler;
 
 public class XtextSetup {
 
-	  static void configureXtextToWorkWithFileNames(InjectorProvider injectorProvider) {
-	    register(new DockerfileContentHandler());
-	    register(new ResourceFactoryDescriptor(injectorProvider));
-	    register(new ResourceServiceProvider(injectorProvider));
-	  }
-	 
-	  private static void register(ContentHandler h) {
-	    ContentHandler.Registry registry = ContentHandler.Registry.INSTANCE;
-	    registry.put(HIGH_PRIORITY, h);
-	  }
-	 
-	  private static void register(Resource.Factory.Descriptor d) {
-	    Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
-	    registry.getContentTypeToFactoryMap().put(DOCKERFILE_FILE_CONTENT_TYPE, d);
-	  }
-	 
-	  private static void register(Provider<IResourceServiceProvider> p) {
-	    IResourceServiceProvider.Registry registry = IResourceServiceProvider.Registry.INSTANCE;
-	    registry.getContentTypeToFactoryMap().put(DOCKERFILE_FILE_CONTENT_TYPE, p);
-	  }
+      static void configureXtextToWorkWithFileNames(InjectorProvider injectorProvider) {
+        register(new DockerfileContentHandler());
+        register(new ResourceFactoryDescriptor(injectorProvider));
+        register(new ResourceServiceProvider(injectorProvider));
+      }
+     
+      private static void register(ContentHandler h) {
+        ContentHandler.Registry registry = ContentHandler.Registry.INSTANCE;
+        registry.put(HIGH_PRIORITY, h);
+      }
+     
+      private static void register(Resource.Factory.Descriptor d) {
+        Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+        registry.getContentTypeToFactoryMap().put(DOCKERFILE_FILE_CONTENT_TYPE, d);
+      }
+     
+      private static void register(Provider<IResourceServiceProvider> p) {
+        IResourceServiceProvider.Registry registry = IResourceServiceProvider.Registry.INSTANCE;
+        registry.getContentTypeToFactoryMap().put(DOCKERFILE_FILE_CONTENT_TYPE, p);
+      }
 }

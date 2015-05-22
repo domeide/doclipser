@@ -30,71 +30,71 @@ import com.zenika.doclipser.api.DockerClientFactory;
 
 public class DockerBuildLaunchShortcut implements ILaunchShortcut2 {
 
-	@Override
-	public void launch(ISelection sel, String mode) {
-		if (sel instanceof IStructuredSelection) {
-			Object selected = ((IStructuredSelection) sel).getFirstElement();
-			if (selected instanceof IFile) {
-				IFile dockerfile = (IFile)selected;
-				IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
-				launch(dockerfile, dockerfilePath);
-			}
-		}
-	}
+    @Override
+    public void launch(ISelection sel, String mode) {
+        if (sel instanceof IStructuredSelection) {
+            Object selected = ((IStructuredSelection) sel).getFirstElement();
+            if (selected instanceof IFile) {
+                IFile dockerfile = (IFile)selected;
+                IPath dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
+                launch(dockerfile, dockerfilePath);
+            }
+        }
+    }
 
-	private void launch(final IFile dockerfile, final IPath dockerfilePath) {
-		Job job = new Job("Docker Build Job") {
-			@Override
-			protected IStatus run(IProgressMonitor monitor) {
-				DockerClient dockerClient = DockerClientFactory.makeDockerClient();
-				dockerClient.defaultBuildCommand(dockerfile.getProject().getName(), dockerfilePath.toOSString());
-				return Status.OK_STATUS;
-			}
-		};
-		job.schedule();
-	}
+    private void launch(final IFile dockerfile, final IPath dockerfilePath) {
+        Job job = new Job("Docker Build Job") {
+            @Override
+            protected IStatus run(IProgressMonitor monitor) {
+                DockerClient dockerClient = DockerClientFactory.makeDockerClient();
+                dockerClient.defaultBuildCommand(dockerfile.getProject().getName(), dockerfilePath.toOSString());
+                return Status.OK_STATUS;
+            }
+        };
+        job.schedule();
+    }
 
-	@Override
-	public void launch(IEditorPart editor, String mode) {
-		IEditorInput input = editor.getEditorInput();
-		IFile dockerfile = (IFile) input.getAdapter(IFile.class);
-		IPath dockerfilePath = null;
-		if (dockerfile != null) {
-			dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
-		}
-		if (dockerfilePath == null) {
-			ILocationProvider locationProvider = (ILocationProvider) input.getAdapter(ILocationProvider.class);
-			if (locationProvider != null) {
-				dockerfilePath = locationProvider.getPath(input);
-			}
-		}
-		if (dockerfilePath != null) {
-			launch(dockerfile, dockerfilePath);
-		}
-	}
+    @Override
+    public void launch(IEditorPart editor, String mode) {
+        IEditorInput input = editor.getEditorInput();
+        IFile dockerfile = (IFile) input.getAdapter(IFile.class);
+        IPath dockerfilePath = null;
+        if (dockerfile != null) {
+            dockerfilePath = dockerfile.getLocation().removeLastSegments(1);
+        }
+        if (dockerfilePath == null) {
+            ILocationProvider locationProvider = (ILocationProvider) input.getAdapter(ILocationProvider.class);
+            if (locationProvider != null) {
+                dockerfilePath = locationProvider.getPath(input);
+            }
+        }
+        if (dockerfilePath != null) {
+            launch(dockerfile, dockerfilePath);
+        }
+    }
 
-	@Override
-	public ILaunchConfiguration[] getLaunchConfigurations(ISelection selection) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public ILaunchConfiguration[] getLaunchConfigurations(ISelection selection) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public ILaunchConfiguration[] getLaunchConfigurations(IEditorPart editorpart) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public ILaunchConfiguration[] getLaunchConfigurations(IEditorPart editorpart) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public IResource getLaunchableResource(ISelection selection) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public IResource getLaunchableResource(ISelection selection) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public IResource getLaunchableResource(IEditorPart editorpart) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public IResource getLaunchableResource(IEditorPart editorpart) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 }

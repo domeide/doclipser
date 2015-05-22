@@ -87,3 +87,6 @@ com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/labeling/
 com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/outline/
 com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/quickfix/
 com.zenika.doclipser.dsl.ui/src/com/zenika/doclipser/dsl/ui/DockerfileDslUiModule.java
+
+# checkstyle
+.checkstyle

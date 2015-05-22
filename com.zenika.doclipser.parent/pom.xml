@@ -11,174 +11,218 @@
     Mario Loriedo @mariolet - Initial implementation
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.zenika.doclipser</groupId>
-    <artifactId>com.zenika.doclipser.parent</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zenika.doclipser</groupId>
+  <artifactId>com.zenika.doclipser.parent</artifactId>
+  <version>0.4.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-    <inceptionYear>2015</inceptionYear>
+  <inceptionYear>2015</inceptionYear>
 
-    <properties>
-        <tycho-version>0.22.0</tycho-version>
-        <xtext-version>2.7.2</xtext-version>
-        <license-maven-version>2.9</license-maven-version>
-    </properties>
+  <properties>
+    <tycho-version>0.22.0</tycho-version>
+    <xtext-version>2.7.2</xtext-version>
+    <license-maven-version>2.9</license-maven-version>
+  </properties>
 
-    <repositories>
-        <repository>
-            <id>luna</id>
-            <layout>p2</layout>
-            <url>http://download.eclipse.org/releases/luna/</url>
-        </repository>
-        <repository>
-            <id>eclipse.xtend</id>
-            <layout>p2</layout>
-            <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
-        </repository>
-    </repositories>
+  <repositories>
+    <repository>
+      <id>luna</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/releases/luna/</url>
+    </repository>
+    <repository>
+      <id>eclipse.xtend</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+    </repository>
+  </repositories>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-				<plugin>
-					<groupId>org.eclipse.xtend</groupId>
-					<artifactId>xtend-maven-plugin</artifactId>
-					<version>${xtext-version}</version>
-					<executions>
-						<execution>
-							<phase>generate-sources</phase>
-							<goals>
-								<goal>compile</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<outputDirectory>xtend-gen</outputDirectory>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.5</version>
-					<executions>
-						<execution>
-							<id>gen-clean</id>
-							<goals>
-								<goal>clean</goal>
-							</goals>
-							<configuration>
-								<filesets>
-									<fileset>
-										<directory>${basedir}/xtend-gen</directory>
-									</fileset>
-								</filesets>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-                <plugin>
-                    <groupId>org.eclipse.tycho</groupId>
-                    <artifactId>tycho-versions-plugin</artifactId>
-                    <version>${tycho-version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.mycila</groupId>
-                    <artifactId>license-maven-plugin</artifactId>
-                    <version>${license-maven-version}</version>
-                    <configuration>
-                        <quiet>false</quiet>
-                        <failIfMissing>false</failIfMissing>
-                        <header>license.txt</header>
-                        <properties>
-                            <owner>Zenika</owner>
-                            <contributor>Mario Loriedo</contributor>
-                            <email>mario.loriedo@gmail.com</email>
-                            <github>l0rd</github>
-                            <twitter>@mariolet</twitter>
-                        </properties>
-                        <encoding>UTF-8</encoding>
-                        <!--                         
-                        <includes>
-                            <includes>**/*.java</includes>
-                        </includes> 
-                        -->
-                        <excludes>
-                            <exclude>**/*.launch</exclude>
-                            <exclude>**/*.xtend</exclude>
-                            <exclude>**/*_trace</exclude>
-                            <exclude>**/*_gen</exclude>
-                            <exclude>**/*.launch</exclude>
-                            <exclude>**/*.launch</exclude>
-                        </excludes>
-                        <useDefaultExcludes>true</useDefaultExcludes>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <plugin>
-                <!-- enable tycho build extension -->
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-maven-plugin</artifactId>
-                <version>${tycho-version}</version>
-                <extensions>true</extensions>
-            </plugin>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.eclipse.xtend</groupId>
+          <artifactId>xtend-maven-plugin</artifactId>
+          <version>${xtext-version}</version>
+          <executions>
+            <execution>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <outputDirectory>xtend-gen</outputDirectory>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>2.5</version>
+          <executions>
+            <execution>
+              <id>gen-clean</id>
+              <goals>
+                <goal>clean</goal>
+              </goals>
+              <configuration>
+                <filesets>
+                  <fileset>
+                    <directory>${basedir}/xtend-gen</directory>
+                  </fileset>
+                </filesets>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-versions-plugin</artifactId>
+          <version>${tycho-version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${license-maven-version}</version>
+          <configuration>
+            <quiet>false</quiet>
+            <failIfMissing>false</failIfMissing>
+            <header>license.txt</header>
+            <properties>
+              <owner>Zenika</owner>
+              <contributor>Mario Loriedo</contributor>
+              <email>mario.loriedo@gmail.com</email>
+              <github>l0rd</github>
+              <twitter>@mariolet</twitter>
+            </properties>
+            <encoding>UTF-8</encoding>
+            <!--                         
+            <includes>
+                <includes>**/*.java</includes>
+            </includes> 
+            -->
+            <excludes>
+              <exclude>**/*.launch</exclude>
+              <exclude>**/*.xtend</exclude>
+              <exclude>**/*_trace</exclude>
+              <exclude>**/*_gen</exclude>
+              <exclude>**/*.launch</exclude>
+              <exclude>**/*.launch</exclude>
+            </excludes>
+            <useDefaultExcludes>true</useDefaultExcludes>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <!-- enable tycho build extension -->
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
 
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>target-platform-configuration</artifactId>
-                <version>${tycho-version}</version>
-                <configuration>
-                    <environments>
-                        <environment>
-                            <os>macosx</os>
-                            <ws>cocoa</ws>
-                            <arch>x86_64</arch>
-                        </environment>
-                        <environment>
-                            <os>linux</os>
-                            <ws>gtk</ws>
-                            <arch>x86_64</arch>
-                        </environment>
-                        <environment>
-                            <os>win32</os>
-                            <ws>win32</ws>
-                            <arch>x86_64</arch>
-                        </environment>
-                    </environments>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-versions-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.mycila</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <environments>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-versions-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.15</version>
+        <executions>
+          <execution>
+            <id>verify-style</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <logViolationsToConsole>true</logViolationsToConsole>
+          <checkstyleRules>
+            <module name="Checker">
+              <module name="SuppressionFilter"></module>
+              >
+              <module name="SuppressionFilter">
+                <property name="file" value="check-style-suppressions.xml" />
+              </module>
+                    <!-- Checks for Size Violations.                    -->
+                    <!-- See http://checkstyle.sf.net/config_sizes.html -->
+              <module name="FileLength">
+                <property name="max" value="3500" />
+                <property name="fileExtensions" value="java" />
+              </module>
+
+                    <!-- Checks for whitespace                               -->
+                    <!-- See http://checkstyle.sf.net/config_whitespace.html -->
+              <module name="FileTabCharacter" />
+
+              <module name="TreeWalker">
+                <module name="StaticVariableName" />
+                <module name="TypeName">
+                  <property name="format" value="^_?[A-Z][a-zA-Z0-9]*$" />
+                </module>
+              </module>
+            </module>
+          </checkstyleRules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
     <!-- the modules that should be built together -->
-    <modules>
-        <module>../com.zenika.doclipser.api</module>
-        <module>../com.zenika.doclipser.dsl</module>
-        <module>../com.zenika.doclipser.dsl.ui</module>
-        <module>../com.zenika.doclipser.dsl.ui.ext</module>
-        <module>../com.zenika.doclipser.dsl.tests</module>
-        <module>../com.zenika.doclipser.ide.ui</module>
-        <module>../com.zenika.doclipser.features.dockerfileeditor</module>
-        <module>../com.zenika.doclipser.features.dockerclient</module>
-        <module>../com.zenika.doclipser.repository</module>
-    </modules>
+  <modules>
+    <module>../com.zenika.doclipser.api</module>
+    <module>../com.zenika.doclipser.dsl</module>
+    <module>../com.zenika.doclipser.dsl.ui</module>
+    <module>../com.zenika.doclipser.dsl.ui.ext</module>
+    <module>../com.zenika.doclipser.dsl.tests</module>
+    <module>../com.zenika.doclipser.ide.ui</module>
+    <module>../com.zenika.doclipser.features.dockerfileeditor</module>
+    <module>../com.zenika.doclipser.features.dockerclient</module>
+    <module>../com.zenika.doclipser.repository</module>
+  </modules>
 
 </project>

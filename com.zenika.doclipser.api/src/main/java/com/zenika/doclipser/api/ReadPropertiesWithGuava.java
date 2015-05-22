@@ -24,25 +24,25 @@ import com.google.common.io.Resources;
  */
 public final class ReadPropertiesWithGuava {
 
-	public final static void main(final String[] args) {
-		final URL url = Resources.getResource(Constants.PROPERTY_FILE_NAME);
-		final ByteSource byteSource = Resources.asByteSource(url);
-		final Properties properties = new Properties();
-		InputStream inputStream = null;
-		try {
-			inputStream = byteSource.openBufferedStream();
-			properties.load(inputStream);
-			properties.list(System.out);
-		} catch (final IOException ioException) {
-			ioException.printStackTrace();
-		} finally {
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (final IOException ioException) {
-					ioException.printStackTrace();
-				}
-			}
-		}
-	}
+    public final static void main(final String[] args) {
+        final URL url = Resources.getResource(Constants.PROPERTY_FILE_NAME);
+        final ByteSource byteSource = Resources.asByteSource(url);
+        final Properties properties = new Properties();
+        InputStream inputStream = null;
+        try {
+            inputStream = byteSource.openBufferedStream();
+            properties.load(inputStream);
+            properties.list(System.out);
+        } catch (final IOException ioException) {
+            ioException.printStackTrace();
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (final IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            }
+        }
+    }
 }

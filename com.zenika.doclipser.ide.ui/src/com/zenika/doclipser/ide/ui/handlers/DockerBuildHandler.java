@@ -20,17 +20,17 @@ import org.eclipse.ui.handlers.HandlerUtil;
 
 public class DockerBuildHandler extends AbstractHandler {
 
-	@Override
-	public Object execute(ExecutionEvent event) throws ExecutionException {
-		ISelection sel = HandlerUtil.getCurrentSelection(event);
-		if (sel instanceof IStructuredSelection) {
-			Object selected = ((IStructuredSelection) sel).getFirstElement();
-			if (selected instanceof IFile) {
-				System.out.println("Selected file: " + ((IFile)selected).getName());
-			}
-		}
-		
-		return null;
-	}
+    @Override
+    public Object execute(ExecutionEvent event) throws ExecutionException {
+        ISelection sel = HandlerUtil.getCurrentSelection(event);
+        if (sel instanceof IStructuredSelection) {
+            Object selected = ((IStructuredSelection) sel).getFirstElement();
+            if (selected instanceof IFile) {
+                System.out.println("Selected file: " + ((IFile)selected).getName());
+            }
+        }
+        
+        return null;
+    }
 
 }

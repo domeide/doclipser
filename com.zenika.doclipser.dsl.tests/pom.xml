@@ -12,43 +12,43 @@
 
 -->
 <project
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.zenika.doclipser</groupId>
-        <artifactId>com.zenika.doclipser.parent</artifactId>
-        <version>0.4.0-SNAPSHOT</version>
-        <relativePath>../com.zenika.doclipser.parent/pom.xml</relativePath>
-    </parent>
+  <parent>
+    <groupId>com.zenika.doclipser</groupId>
+    <artifactId>com.zenika.doclipser.parent</artifactId>
+    <version>0.4.0-SNAPSHOT</version>
+    <relativePath>../com.zenika.doclipser.parent/pom.xml</relativePath>
+  </parent>
 
-    <artifactId>com.zenika.doclipser.dsl.tests</artifactId>
-    <packaging>eclipse-test-plugin</packaging>
+  <artifactId>com.zenika.doclipser.dsl.tests</artifactId>
+  <packaging>eclipse-test-plugin</packaging>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>gen-clean</id>
-                        <phase>clean</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.xtend</groupId>
-                <artifactId>xtend-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-surefire-plugin</artifactId>
-                <version>${tycho-version}</version>
-                <configuration>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>gen-clean</id>
+            <phase>clean</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.xtend</groupId>
+        <artifactId>xtend-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-surefire-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

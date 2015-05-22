@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]formatting[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]generator[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]scoping[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]validation[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]resource[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]DockerfileDslRuntimeModule.java"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]DockerfileDslStandaloneSetup.java"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]ui[\\/]contentassist[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]ui[\\/]labeling[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]ui[\\/]outline[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]ui[\\/]quickfix[\\/]"/>
+    <suppress checks=".*" files="src[\\/]com[\\/]zenika[\\/]doclipser[\\/]dsl[\\/]ui[\\/]DockerfileDslUiModule.java"/>
+    <suppress checks=".*" files="src-gen[\\/]"/>
+</suppressions>
