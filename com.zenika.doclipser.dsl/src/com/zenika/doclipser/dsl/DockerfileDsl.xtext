@@ -35,7 +35,7 @@ Onbuild:
 ;   
     
 From:
-    'FROM ' name=ID (':' tag=ID)?
+    'FROM ' name=VALID_IMAGE_NAME (':' tag=ID)?
 ;
 
 Maintainer:
@@ -134,6 +134,10 @@ VALID_URL returns ecore::EString:
 
 INT_PREFIXED_BY_SPACE:
     INT (' '|'\n'|'\r')
+;
+
+VALID_IMAGE_NAME returns ecore::EString : 
+  ID ('/' ID)*
 ;
 
 terminal SL_COMMENT : '#' !('\n'|'\r')* ('\r'? '\n')?;

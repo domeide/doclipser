@@ -79,6 +79,17 @@ class DockerfileParserTest {
   }
 	
   @Test 
+  def void parseFromWithSlash() {
+    var dockerfile = parser.parse("FROM mariolet/hamba")
+    if (dockerfile!=null)
+    	printErrors(dockerfile) 
+    assertTrue(dockerfile.eResource.errors.empty);
+
+    val from = dockerfile.instructions.head as From
+    assertEquals("mariolet/hamba",from.name)
+  }
+	
+  @Test 
   def void parseEnv() {
     var dockerfile = parser.parse("ENV key value")
     printErrors(dockerfile)
