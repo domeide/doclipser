@@ -70,12 +70,23 @@ class DockerfileParserTest {
   }
 	
   @Test 
-  def void parseFromWithTag() {
+  def void parseFromWithLatest() {
     var dockerfile = parser.parse("FROM busybox:latest")
-    printErrors(dockerfile)
+    if (dockerfile!=null)
+    	printErrors(dockerfile) 
     assertTrue(dockerfile.eResource.errors.empty);
     val from = dockerfile.instructions.head as From
     assertEquals("latest",from.tag)
+  }
+	
+  @Test 
+  def void parseFromWithTag() {
+    var dockerfile = parser.parse("FROM maven:3.3-jdk-8-onbuild")
+    if (dockerfile!=null)
+    	printErrors(dockerfile) 
+    assertTrue(dockerfile.eResource.errors.empty);
+    val from = dockerfile.instructions.head as From
+    assertEquals("3.3-jdk-8-onbuild",from.tag)
   }
 	
   @Test 
