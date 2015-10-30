@@ -19,7 +19,7 @@
   <parent>
     <groupId>com.zenika.doclipser</groupId>
     <artifactId>com.zenika.doclipser.parent</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.4.1</version>
     <relativePath>../com.zenika.doclipser.parent/pom.xml</relativePath>
   </parent>
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.zenika.doclipser.ide.ui
 Bundle-SymbolicName: com.zenika.doclipser.ide.ui;singleton:=true
-Bundle-Version: 0.4.0.qualifier
+Bundle-Version: 0.4.1
 Bundle-Activator: com.zenika.doclipser.ide.ui.DockerIDEUIActivator
 Bundle-Vendor: Zenika
 Require-Bundle: org.eclipse.ui,

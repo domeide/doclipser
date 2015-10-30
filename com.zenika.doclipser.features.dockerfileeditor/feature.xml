@@ -14,7 +14,7 @@
 <feature
       id="com.zenika.doclipser.features.dockerfileeditor"
       label="Doclipser - Dockerfile Editor"
-      version="0.4.0.qualifier"
+      version="0.4.1"
       provider-name="Zenika"
       plugin="com.zenika.doclipser.dsl.ui"
       os="linux,macosx,win32"
