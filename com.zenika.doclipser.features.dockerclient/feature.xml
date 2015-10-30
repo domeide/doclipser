@@ -14,7 +14,7 @@
 <feature
       id="com.zenika.doclipser.features.dockerclient"
       label="Doclipser - Docker API Client"
-      version="0.4.1"
+      version="0.4.2.qualifier"
       provider-name="Zenika"
       plugin="com.zenika.doclipser.ide.ui">
 

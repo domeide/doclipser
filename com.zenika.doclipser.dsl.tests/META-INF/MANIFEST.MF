@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.zenika.doclipser.dsl.tests
 Bundle-Vendor: Zenika 
-Bundle-Version: 0.4.1
+Bundle-Version: 0.4.2.qualifier
 Bundle-SymbolicName: com.zenika.doclipser.dsl.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.zenika.doclipser.dsl,
