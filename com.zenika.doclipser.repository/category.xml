@@ -12,10 +12,10 @@
 
 -->
 <site>
-   <feature url="features/com.zenika.doclipser.features.dockerfileeditor_0.4.2.qualifier.jar" id="com.zenika.doclipser.features.dockerfileeditor" version="0.4.2.qualifier" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
+   <feature url="features/com.zenika.doclipser.features.dockerfileeditor_0.4.2.jar" id="com.zenika.doclipser.features.dockerfileeditor" version="0.4.2" os="linux,macosx,win32" ws="carbon,cocoa,gtk,motif,photon,win32,wpf" arch="ia64,x86_64">
       <category name="DockerfileEditor"/>
    </feature>
-   <feature url="features/com.zenika.doclipser.features.dockerclient_0.4.2.qualifier.jar" id="com.zenika.doclipser.features.dockerclient" version="0.4.2.qualifier">
+   <feature url="features/com.zenika.doclipser.features.dockerclient_0.4.2.jar" id="com.zenika.doclipser.features.dockerclient" version="0.4.2">
       <category name="DockerApiClient"/>
    </feature>
    <category-def name="DockerfileEditor" label="Dockerfile editor">

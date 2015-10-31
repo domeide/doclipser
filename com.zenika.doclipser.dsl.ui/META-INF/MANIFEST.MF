@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.zenika.doclipser.dsl.ui
 Bundle-Vendor: Zenika
-Bundle-Version: 0.4.2.qualifier
+Bundle-Version: 0.4.2
 Bundle-SymbolicName: com.zenika.doclipser.dsl.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.zenika.doclipser.dsl;visibility:=reexport,
