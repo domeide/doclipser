@@ -44,7 +44,7 @@ In order to run Docker commands doclipser need to be configured to connect to a 
 Just make sure you can run Docker without sudo (i.e. [user belongs to docker group](https://docs.docker.com/installation/ubuntulinux/#create-a-docker-group))
 
 #### On MacOS or Windows (or when Docker is on a remote host)
-Edit doclipser configuration file: `<Eclipse Install Directory>/plugins/com.zenika.docker.api_<Version>/docker.properties`. You will need to set `docker.api.uri` and `docker.api.cert.path` properties
+Edit doclipser configuration file: `<Eclipse Install Directory>/plugins/com.zenika.doclipser.api_<Version>/docker.properties`. You will need to set `docker.api.uri` and `docker.api.cert.path` properties
 
 ## Contributing
 
